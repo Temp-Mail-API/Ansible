@@ -1,0 +1,10 @@
+# includes that to not alter the system can be made conditional here
+# (otherwise, we might have to undo stuff when variables change)
+
+# keep installing admintools the first thinng to do
+
+
+- include: email_send_test.yml
+  when: do_email_send_test
+  tags: [email_test]
+
